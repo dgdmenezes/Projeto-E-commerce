@@ -1,0 +1,168 @@
+#whatsapp_float{
+    width: 100px;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    box-shadow:0;
+    background-color: white;
+    border-radius: 50%;
+    transition: background-color 0.5ms;
+    transition: box-shaddow 0.5ms;
+    
+       
+}
+#whatsapp_float:hover{
+    
+    background-color: green;
+    box-shadow: inset white 0 0 15px 10px;  
+}
+
+#login-in-out{
+    background-color: lightgray;
+    margin-right: 1%;
+    padding: 5%;
+    border-radius: 12px;
+    border: 1px solid black;
+    
+    flex-shrink: 0;
+}
+
+.fora-img{
+        margin-top: 10%;
+        
+}
+
+
+.grupo-busca{
+    margin-top: 4%;
+}
+.busca{
+    width: calc(100% - 35px);
+    border: 2px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+
+.lupabusca{
+    background-color: lightgray;
+    padding: 1px 1px 1px 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid black;
+    align-items: center;
+}
+
+header{
+    background-color: #0060b1;
+}
+
+body{
+    background-color:#08284c;
+}
+
+.header-icon-button{
+    color: black;
+    
+}
+.link-nav-menu{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: 0.4s;
+    font-weight:500;
+    
+}
+
+.link-nav-menu:visited{
+    text-decoration: none;
+    color: white;
+        
+}
+
+.link-nav-menu:hover{
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+}
+
+.carrossel{
+    background-color: white;
+}
+
+.carousel-item-block{
+    margin-bottom: 1rem ;
+    margin-top: 1rem;
+}
+.carousel-item-text{
+    border: 0;
+    padding: 1.2rem;
+}
+
+.carousel-item-table{
+    padding-left: 2em;
+}
+
+tr span{
+    font-weight: bold;
+}
+
+.container-card{
+    background-color: #e0e0e0; 
+}
+
+
+
+.card-back-style{
+    border: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.card-img-top{
+    padding: 4%;
+    
+}
+
+.card-button-color{
+    background-color: #ff6500;
+    border: 1px solid #a44e08;
+    color: white;
+    font-weight: bold;
+
+}
+
+.card-color-button:hover{
+    background-color: #b86107;
+    border: 1px solid #a44e08;
+    
+
+}
+
+.card-img-dimensions{
+    max-height: 190px;
+    max-width: 100%;
+    width: fit-content;
+    
+    
+
+}
+
+footer{
+    background-color: black;
+    color: #FFF;
+}
+
+.fale-conosco{
+    text-align: right;
+}
+
+@media (max-width:576px){
+.hide-menu{
+	display:none;
+
+}
+}
