@@ -64,6 +64,7 @@ cardBodyDiv.className = "card-body d-grid gap-2"
     
     cardButton.onclick = function(){
         AddCarrinho(index)
+        AtualizarModal()
     }
 
     /*let addButton = document.createElement("button")
@@ -125,4 +126,99 @@ function ExibirquantidadeCarrinho(){
     contador.textContent = `${valor.toLocaleString('en-US',{
         minimumIntegerDigits: 2,
         useGrouping: false})}`
+}
+
+function AtualizarModal(){
+    let carrinhoModalDiv = document.querySelector(".modal-body")
+    carrinhoModalDiv.innerHTML = '' //apaga o "nenhum prod no carrinho"
+
+    let tituloDiv = document.createElement("div")//Cria o titulo dos produtos
+    tituloDiv.className="row"
+
+        let tituloDivCol3 = document.createElement("div")
+        tituloDivCol3.className ="col-3"
+    
+        let tituloDivCol5Produto = document.createElement("div")
+        tituloDivCol5Produto.className ="col-5" 
+            let h5Produto = document.createElement("h5")
+            h5Produto.textContent = "Produto"
+            tituloDivCol5Produto.appendChild(h5Produto)
+    
+        let tituloDiviCol2Quantidade = document.createElement("div")
+        tituloDiviCol2Quantidade.className ="col-2"
+            let h5quantidade = document.createElement("h5")
+            h5quantidade.textContent="Quantidade"
+            tituloDiviCol2Quantidade.appendChild(h5quantidade)
+
+        let tituloDivCol2Preco = document.createElement("div")
+        tituloDivCol2Preco.className ="col-2"
+            let h5preco = document.createElement("h5")
+            h5preco.textContent="Preco"
+            tituloDivCol2Preco.appendChild(h5preco)
+
+    tituloDiv.appendChild(tituloDivCol3)
+    tituloDiv.appendChild(tituloDivCol5Produto)
+    tituloDiv.appendChild(tituloDiviCol2Quantidade)
+    tituloDiv.appendChild(tituloDivCol2Preco)
+
+    carrinhoModalDiv.appendChild(tituloDiv) //fim da criacao do titulo dos produtos
+
+    
+    //aqui vai rolar um map pra puxar os objetos no array carrinho (id, imagem, descricao, preco. text_alt, qtd)
+    carrinho.map(produto =>{
+
+         
+    let modalItemDiv = document.createElement("div")
+    modalItemDiv.className = "modalItem row"
+
+        let hr = document.createElement("hr") //1
+        
+        let modalItemImagemDiv = document.createElement("div") //2
+        modalItemImagemDiv.className = "modalItemImagem col-3"
+            let imgModalImagem = document.createElement("img")
+            imgModalImagem.className="modalImagem"
+            imgModalImagem.src=`${produto.imagem}`
+            imgModalImagem.alt=`${produto.text_alt}`
+            modalItemImagemDiv.appendChild(imgModalImagem)
+
+        let modalItemDescricaoDiv = document.createElement("div") //3
+        modalItemDescricaoDiv.className ="modalItemDescricao col-5"
+            let descricaoh6 = document.createElement("h6")
+            descricaoh6.textContent=`${produto.descricao}`
+            modalItemDescricaoDiv.appendChild(descricaoh6)
+        
+        let modalItemQuantidadeDiv = document.createElement("div")//4
+        modalItemQuantidadeDiv.className="modalItemQuantidade col-2"
+            let buttonPlusDiv = document.createElement("div")
+                let buttonPlus = document.createElement("button")
+                buttonPlus.className = "btn"
+                buttonPlus.textContent="+"
+                buttonPlusDiv.appendChild(buttonPlus)
+            let QuantidadeDiv = document.createElement("div")
+                let QuantidadeP = document.createElement("p")
+                QuantidadeP.textContent=`${produto.qtd}`
+                QuantidadeDiv.appendChild(QuantidadeP)
+            let buttonMinusDiv = document.createElement("div")
+                let buttonMinus = document.createElement("button")
+                buttonMinus.className="btn"
+                buttonMinus.textContent="-"
+                buttonMinusDiv.appendChild(buttonMinus)
+            modalItemQuantidadeDiv.appendChild(buttonPlusDiv)
+            modalItemQuantidadeDiv.appendChild(QuantidadeDiv)
+            modalItemQuantidadeDiv.appendChild(buttonMinusDiv)
+        
+        let modalItemPrecoDiv = document.createElement("div") //5
+        modalItemPrecoDiv.className = "modalItemPreco col-2"
+            let modalItemPrecoH5 = document.createElement("h5")
+            modalItemPrecoH5.textContent = `${produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+            modalItemPrecoDiv.appendChild(modalItemPrecoH5)
+        
+    modalItemDiv.appendChild(hr)
+    modalItemDiv.appendChild(modalItemImagemDiv)
+    modalItemDiv.appendChild(modalItemDescricaoDiv)
+    modalItemDiv.appendChild(modalItemQuantidadeDiv)
+    modalItemDiv.appendChild(modalItemPrecoDiv)
+    carrinhoModalDiv.appendChild(modalItemDiv)
+})  
+
 }

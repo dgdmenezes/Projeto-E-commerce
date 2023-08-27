@@ -17,25 +17,24 @@
 
         <header class="row">
             <!-- logo -->
-            <div class="visual col-xs-12 col-sm-12 col-md-3 col-xl-2 fora-logo ">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-xl-2 fora-logo">
                 <div class="col">
                 <img src="assets/Logo.webp" alt= "Logotipo de fundo azul com letras laranjas escrito: SuperTech" class="img-fluid fora-img">
                 </div>
             </div>
             
             <!-- Search Bar -->
-            <div class="d-flex col-xs-6 col-sm-12 col-md-5 col-xl-8 align-items-center py-3">
+            <div class="d-flex col-xs-6 col-sm-12 col-md-5 col-xl-8 align-items-center py-4">
                 <form class="w-100 me-3" role="search">
                   <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">
                 </form>
             </div>
             <!-- Login-->
-            <div class="col-xs-1 col-sm-1 col-md-1 col-xl-1 py-3 header-icon-button">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-xl-1 header-icon-button py-4">
                 <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="assets/login-box-line-white.svg" alt="mdo" width="32" height="32" class="rounded-circle">
                   </a>
                   <ul class="dropdown-menu text-small shadow">
-                    
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Últimos pedidos</a></li>
                     <li><a class="dropdown-item" href="#">Alterar Cadastro</a></li>
@@ -44,12 +43,20 @@
                   </ul>
             </div>
             <!-- Carrinho-->
-            <div class="col-xs-1 col-sm-1 col-md-1 col-xl-1 py-3">
-                <a href="#" class="d-block ">
-                    <img src="assets/shopping-cart-line-white.svg" alt="mdo" width="32" height="32" class="">
-                </a>
-                <p id="contadorCarrinho" style="color:white">00</p>
-                </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-xl-1 header-icon-button py-4">
+              <a href="#" class="d-block">
+                <img src="assets/shopping-cart-line-white.svg" alt="mdo" width="32" height="32" class="" data-bs-toggle="modal" data-bs-target="#modalExibirCarrinho" >
+            </a>
+            <div id="contadorCarrinhoDiv">
+            <p id="contadorCarrinho" class="" style="color:white">00</p>
+            </div>
+          </div>
+
+            
+            <!-- <div class="col-xs-1 col-sm-1 col-md-1 col-xl-1 py-1">
+                
+                
+                </div> -->
         
             <!--Barra de navegação-->
             <nav class="py-2 bg-body-tertiary border-bottom">
@@ -184,6 +191,25 @@
         
      </div>                    
 
+
+<!-- Modal -->
+<div class="modal fade" id="modalExibirCarrinho" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Meu Carrinho</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="carrinhoModal">
+        <p>Você ainda não colocou nenhum produto no seu carrinho! :(</p>
+      </div>
+     <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Finalizar compra</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -->
      <whatsapp><img id="whatsapp_float" src="assets/whatsapp.webp" alt="Fale Conosco pelo Whatsapp!"></whatsapp>
 
      <div class="">

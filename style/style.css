@@ -66,6 +66,20 @@ body{
     color: black;
     
 }
+
+#contadorCarrinhoDiv{
+   text-align: center;
+   justify-content: center;
+   border: #a44e08 solid 0.5px;
+   background-color: #ff6500;
+   border-radius: 30%;
+   display: block;
+   position: relative;
+   bottom: 3.125rem;
+   left: 1.5625rem;
+   width: 1.5rem;
+   height: 1.6rem;
+}
 .link-nav-menu{
     text-decoration: none;
     color: white;
@@ -149,6 +163,28 @@ tr span{
     
     
 
+}
+
+.modalItem{
+    display: flex;
+}
+
+.modalItemImagem{
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.modalImagem{
+    max-width: 200px;
+    width: fit-content;
+    height: fit-content;
+    max-height: 150px;
+}
+.modalItemQuantidade{
+    display: flex;
+    justify-content: space-around;
+    
 }
 
 footer{
