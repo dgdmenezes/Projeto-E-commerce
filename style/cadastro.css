@@ -1,0 +1,63 @@
+.login-div{
+    background-color: #e0e0e0;
+}
+
+.login-form-div{
+    background-color: e0e0e0;
+}
+
+.texto-link{
+    text-decoration: none;
+    color: blue;
+    
+}
+.texto-link:visited{
+    color: blue;
+}
+.texto-link:hover{
+    text-decoration:underline;
+}
+.texto-link-div{
+    text-align: right;
+}
+
+.btn-google{
+    border: 1px black solid;
+}
+.btn-google:hover{
+    border: 1px black solid;
+    background-color: lightgray;
+}
+
+.detalhe{
+    font-size: smaller;
+}
+
+.detalhe-red{
+    color: red;
+}
+.form-grande{
+    width: 300px;
+}
+.form-medio{
+    width: 200px;
+}
+.form-pequeno{
+    width: 150px;
+}
+
+
+.form-div{
+
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    padding: 16px;
+    min-width: 350px;
+    margin: 20px;
+    
+}
+
+.back-outside{
+    background-color: white;
+ 
+}

@@ -181,11 +181,13 @@ tr span{
     height: fit-content;
     max-height: 150px;
 }
+
 .modalItemQuantidade{
     display: flex;
     justify-content: space-around;
     
 }
+
 
 footer{
     background-color: black;

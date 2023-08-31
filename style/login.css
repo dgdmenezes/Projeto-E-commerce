@@ -1,0 +1,33 @@
+.screen-size{
+    min-height: 100vh;
+}
+.login-div{
+    background-color: #e0e0e0;
+}
+
+.login-form-div{
+    background-color: white;
+}
+
+.texto-link{
+    text-decoration: none;
+    color: blue;
+    
+}
+.texto-link:visited{
+    color: blue;
+}
+.texto-link:hover{
+    text-decoration:underline;
+}
+.texto-link-div{
+    text-align: right;
+}
+
+.btn-google{
+    border: 1px black solid;
+}
+.btn-google:hover{
+    border: 1px black solid;
+    background-color: lightgray;
+}

@@ -34,7 +34,7 @@ cardDiv.className = `col-sm-6 col-md-4 col-lg-3`
 cardDiv.id = `${produto.id}`
 
 let cardBorderDiv = document.createElement("div")
-cardBorderDiv.className = "card border-primary card-back-style"
+cardBorderDiv.className = "card border-primary card-back-style shadow"
 
 cardDiv.appendChild(cardBorderDiv)
 
