@@ -141,11 +141,26 @@ tr span{
     
 }
 
+.card-body-custom{
+    width: 90%;
+}
+
+.card-body-custom p{
+    text-align: center;
+    
+}
+
+.card-body-custom h5{
+    text-align: center;
+    
+}
+
 .card-button-color{
     background-color: #ff6500;
     border: 1px solid #a44e08;
     color: white;
     font-weight: bold;
+    
 
 }
 

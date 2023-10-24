@@ -1,10 +1,6 @@
 let produtos = [
     {
-        id: 125,
-        imagem: "prodimages/product125.png",
-        descricao: "Monitor Dell 450083",
-        preco: 1500.00,
-        text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"
+        id: 125,imagem: "prodimages/product125.png",descricao: "Monitor Dell 450083",preco: 1500.00,text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"
     },
     {id: 160, imagem: "prodimages/product160.jpg",descricao: "Monitor Samsung T350",preco: 800.00, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
     {id: 181,imagem: "prodimages/product181.jpg",descricao: "Monitor LG 3544",preco: 400.00, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
@@ -18,7 +14,6 @@ let produtos = [
     {id: 443,imagem: "prodimages/product443.jpg",descricao: "Tp link Archer c80",preco: 358.66, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
     {id: 136,imagem: "prodimages/product136.jpg",descricao: "Iphone 11 64GB preto",preco: 2706.55, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
 ]
-//
 
 let carrinho = []
 //Exibir cards 

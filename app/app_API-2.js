@@ -1,24 +1,9 @@
-let produtos = [
-    {
-        id: 125,
-        imagem: "prodimages/product125.png",
-        descricao: "Monitor Dell 450083",
-        preco: 1500.00,
-        text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"
-    },
-    {id: 160, imagem: "prodimages/product160.jpg",descricao: "Monitor Samsung T350",preco: 800.00, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-    {id: 181,imagem: "prodimages/product181.jpg",descricao: "Monitor LG 3544",preco: 400.00, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-    {id: 158,imagem: "prodimages/product158.jpg",descricao: "Notebook HP Core i3",preco: 2429.10, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-    {id: 123,imagem: "prodimages/product123.jpg",descricao: "MacBook Air M1 D",preco: 7499.99, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-    {id: 285,imagem: "prodimages/product285.jpg",descricao: "PlayStation 4",preco: 2749.99, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-    {id: 128,imagem: "prodimages/product128.jpg",descricao: "PlayStation 5",preco: 4299.00, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-    {id: 188,imagem: "prodimages/product188.jpg",descricao: "WebCam Logi C920",preco: 395.99, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-    {id: 18,imagem: "prodimages/product18.webp",descricao: "Dell Vostro 5535",preco: 4200.00, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-    {id: 227,imagem: "prodimages/product237.jpg",descricao: "Zelda Tear of The Kingdom",preco: 329.90, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-    {id: 443,imagem: "prodimages/product443.jpg",descricao: "Tp link Archer c80",preco: 358.66, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-    {id: 136,imagem: "prodimages/product136.jpg",descricao: "Iphone 11 64GB preto",preco: 2706.55, text_alt:"Um monitor com exibindo um gráfico e fundo em vermelho. Tem a base prateada"},
-]
-//
+const URL = "http://localhost:3000"
+
+
+
+
+
 
 let carrinho = []
 //Exibir cards 
@@ -28,11 +13,15 @@ function ExibirProdutos(){
 
 let cardTotal = document.querySelector(".container-card")
 
-produtos.map( (produto, index) =>{
+fetch (`${URL}/products`)
+.then(res => res.json())
+.then(data => {
+    console.log(data);
+    data.map((produto, index) =>{
 
 let cardDiv = document.createElement("div")
 cardDiv.className = `col-sm-6 col-md-4 col-lg-3`
-cardDiv.id = `${produto.id}`
+cardDiv.id = `${produto._id}`
 
 let cardBorderDiv = document.createElement("div")
 cardBorderDiv.className = "card border-primary card-back-style shadow"
@@ -41,8 +30,8 @@ cardDiv.appendChild(cardBorderDiv)
 
 let img = document.createElement("img")
 img.className = "card-img-top card-img-dimensions"
-img.src=produto.imagem
-img.alt=produto.text_alt
+img.src=produto.image
+img.alt=produto.description
 
 cardBorderDiv.appendChild(img)
 
@@ -55,13 +44,13 @@ cardBodyDiv.className = "card-body d-grid gap-2 card-body-custom"
 
     let cardText = document.createElement("p")
     cardText.className = "card-text"
-    cardText.textContent = `${produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    cardText.textContent = `${produto.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
 
     let cardButton = document.createElement("a")
     cardButton.className = "btn btn-primary card-button-color"//btn-info fw-bold
     //cardButton.href="#"
     cardButton.textContent="Comprar"
-    cardButton.id = `prod${produto.id}`
+    cardButton.id = `prod${produto._id}`
     
     cardButton.onclick = function(){
         AddCarrinho(index)
@@ -83,7 +72,7 @@ cardBodyDiv.appendChild(cardButton)
 cardBorderDiv.appendChild(cardBodyDiv)
 
 cardTotal.appendChild(cardDiv)
-})
+})})
 
 
 }
